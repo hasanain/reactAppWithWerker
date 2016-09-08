@@ -26,10 +26,10 @@ build:
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
     
-    - script:
-        name: build static files
-        code: |
-          npm run build
+   # - script:
+   #     name: build static files
+   #     code: |
+   #       npm run build
 heroku:
     steps:
       - heroku-deploy:
