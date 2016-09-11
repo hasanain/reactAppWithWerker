@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
-    "react-scripts": "0.4.1"
+    "react-scripts": "0.4.1",
+    "surge": "^0.18.0"
   },
   "dependencies": {
     "express": "^4.14.0",
@@ -13,6 +14,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "surge ./build $(cat CNAME) --token $SURGE_TOKEN",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
