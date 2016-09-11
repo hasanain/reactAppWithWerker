@@ -14,7 +14,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "start-prod": "node_modules/react-scripts/bin/react-scripts.js build && node server.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
