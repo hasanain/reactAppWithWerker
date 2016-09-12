@@ -2,9 +2,9 @@ box: node
 
 build:
   steps:
-    -script:
+    - script:
         name: set root permissions for npm
-        code: | 
+        code: |
           npm config set unsafe-perm true
     - npm-install
     - script:
