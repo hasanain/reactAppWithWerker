@@ -4,11 +4,14 @@ build:
   steps:
     -script:
         name: set root permissions for npm
-        code: npm config set unsafe-perm true
+        code: | 
+          npm config set unsafe-perm true
+    
     - npm-install
     - script:
         name: build 
-        code: npm run build
+        code: |
+          npm run build
 heroku:
     steps:
       - heroku-deploy:
@@ -21,4 +24,5 @@ deploy-to-surge:
     steps:
       - script:
         name: deploy to surge
-        code: npm run deploy
+        code: | 
+          npm run deploy
