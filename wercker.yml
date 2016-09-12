@@ -2,8 +2,9 @@ box: node
 
 build:
   steps:
+    -script:
+        code: npm config set unsafe-perm true
     - npm-install
-
     - script:
         name: build 
         code: npm run build
